@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import homeController from '../controllers/homeController.js';
+import homeController from '../controllers/HomeController';
 
 const router = new Router();
-router.post('/novoAluno', homeController.index);
+router.post('/', homeController.index);
 
 export default router;

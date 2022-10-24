@@ -2,7 +2,10 @@ import express from 'express';
 import dotenv from 'dotenv';
 import './src/database';
 import bodyParser from 'body-parser';
+
 import homeRoutes from './src/routes/homeRoutes.js';
+import userRoutes from './src/routes/userRoutes.js';
+import tokenRoutes from './src/routes/tokenRoutes.js';
 
 dotenv.config();
 
@@ -20,6 +23,8 @@ class App {
 
   routes() {
     this.app.use('/', homeRoutes);
+    this.app.use('/users/', userRoutes);
+    this.app.use('/tokens/', tokenRoutes);
   }
 }
 
