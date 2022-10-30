@@ -12,19 +12,8 @@ import Aluno from '../models/Aluno.js';
  */
 
 class HomeController {
-  async index(req, res) {
-    const novoAluno = await Aluno.create({
-      nome: req.body.nome,
-      sobrenome: req.body.sobrenome,
-      email: req.body.email,
-      idade: req.body.idade,
-      peso: req.body.peso,
-      altura: req.body.altura,
-    });
-    /** Retorna para o usuário informações do usuário
-     * criado
-     */
-    res.json(novoAluno);
+  index(req, res) {
+    res.json('index');
   }
 }
 
