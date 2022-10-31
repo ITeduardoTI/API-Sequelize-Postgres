@@ -1,0 +1,9 @@
+import Aluno from '../models/Aluno.js';
+
+class FotoController {
+  async store(req, res) {
+    res.json(req.file);
+  }
+}
+
+export default new FotoController();
